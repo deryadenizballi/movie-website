@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 menu();
 
 headerSlider();
@@ -16,6 +17,10 @@ function menu() {
   });
 }
 
+=======
+headerSlider();
+
+>>>>>>> header-slider
 
 function headerSlider() {
   var swiper = new Swiper(".header-slider", {
