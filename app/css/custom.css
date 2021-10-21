@@ -16,3 +16,67 @@ body {
     color: var(--black);
 }
 
+/**************************** web menu ************************* */
+.web__menu , .web__menu ul , .web__menu ul li{
+    height: 100%;
+}
+
+.web__menu ul li {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.web__menu ul li a {
+    text-decoration: none;
+    padding: 40px 0;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.web__menu ul li a img {
+    width: 150px;
+}
+
+.web__menu ul li:hover a {
+    text-decoration:line-through;
+}
+
+.mobil__menu {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger__bar{
+    border: 1px solid red;
+}
+
+.hamburger__bar span {
+    display: block;
+    background-color: var(--black);
+    width: 20px;
+    height: 2px;
+    margin-bottom: 5px;
+}
+
+.hamburger__bar span:first-child {
+  
+    margin-right:0 px;
+}
+
+.hamburger__bar span:nth-child(2)  {
+    border: 1px solid red;
+    margin-right: 15px;
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    .web__menu {
+        display: none;
+    }
+   
+}
