@@ -16,3 +16,37 @@ body {
     color: var(--black);
 }
 
+
+
+/******************************** HEADER SLIDER (begin) ***************************************************/
+.header-slider{
+
+}
+.header-slider__item{
+    /* margin:0 15px; */
+    position: relative;
+    /* overflow: hidden; */
+    cursor: pointer;
+    transition: transform .7s;
+}
+.header-slider__item::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.header-slider__item:hover{
+    transform: scale(1.02);
+}
+.header-slider__title{
+    position: absolute;
+    left: -15px;
+    bottom: -15px;
+    z-index: 100;
+    font-size: 45px;
+    line-height: 43px;
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+/******************************** HEADER SLIDER (end) ***************************************************/
