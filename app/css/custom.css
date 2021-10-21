@@ -58,10 +58,7 @@ body {
 }
 
 .mobile_menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
+  display: none;
 }
 
 .hamburger {
@@ -79,14 +76,19 @@ body {
   outline: none;
   border: none;
 }
-
+.hamburger:before{
+  right: 0px;
+}
+.hamburger .bar{
+  right: 10px;
+  top: 1px;
+}
 .hamburger .bar,
-.hamburger:after,
 .hamburger:before {
   content: "";
   display: block;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: black;
   margin: 4px 0;
   transition: 0.4s;
@@ -97,14 +99,11 @@ body {
 .hamburger.is-active:before {
   transform: rotate(45deg) translateX(6px) translateY(7px);
 }
-
-.hamburger.is-active:after {
-  transform: rotate(-45deg) translateX(0px) translateY(-3px);
-}
-
 .hamburger.is-active .bar {
-  opacity: 0;
+  transform: rotate(-45deg) translateX(6px) translateY(7px);
 }
+
+
 
 .mobile__nav {
   position: fixed;
@@ -124,31 +123,43 @@ body {
   overflow: hidden;
 }
 
-.mobile__nav ul  {
-    margin: 0;
-    padding: 0;
-  }
+.mobile__nav ul {
+  margin: 0;
+  padding: 0;
+}
 
 .mobile__nav ul li a {
   list-style: none;
   display: flex;
   justify-content: space-between;
 }
+
+.mobile__nav ul li a i {
+  color: #989898;
+}
+
 .mobile__nav a {
   display: block;
   text-align: left;
   margin-bottom: 5px;
   padding: 5px 25px;
   color: black;
+  font-weight: 500;
   text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .web__menu {
     display: none;
   }
   .hamburger__menu {
     display: block;
+  }
+  .mobile_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
   }
 }
 =======
