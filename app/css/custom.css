@@ -16,3 +16,50 @@ body {
     color: var(--black);
 }
 
+
+
+/******************************** HEADER SLIDER (begin) ***************************************************/
+.header-slider{
+}
+.header-slider__item{
+    position: relative;
+    cursor: pointer;
+    transition: transform .7s;
+}
+.header-slider__item::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top,rgba(255,255,255,.8) 0,rgba(255,255,255,0) 100%);
+    width: 100%;
+    height: 20%;
+    transition: all .7s;
+}
+.header-slider__img{
+    position: relative;
+    overflow: hidden;
+    transition: all .7s;
+}
+.header-slider__img:hover{
+    transform: scale(1.02);
+}
+.header-slider__title{
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 45px;
+    line-height: 43px;
+    color: var(--black);
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: left .5s;
+}
+.header-slider__item:hover .header-slider__title{
+    left: 35px;
+}
+.header-slider__item:hover::after{
+    transform: scale(1.02);
+}
+/******************************** HEADER SLIDER (end) ***************************************************/
