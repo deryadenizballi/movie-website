@@ -75,14 +75,19 @@ body {
   outline: none;
   border: none;
 }
-
+.hamburger:before{
+  right: 0px;
+}
+.hamburger .bar{
+  right: 10px;
+  top: 1px;
+}
 .hamburger .bar,
-.hamburger:after,
 .hamburger:before {
   content: "";
   display: block;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: black;
   margin: 4px 0;
   transition: 0.4s;
@@ -93,14 +98,11 @@ body {
 .hamburger.is-active:before {
   transform: rotate(45deg) translateX(6px) translateY(7px);
 }
-
-.hamburger.is-active:after {
-  transform: rotate(-45deg) translateX(0px) translateY(-3px);
-}
-
 .hamburger.is-active .bar {
-  opacity: 0;
+  transform: rotate(-45deg) translateX(6px) translateY(7px);
 }
+
+
 
 .mobile__nav {
   position: fixed;
