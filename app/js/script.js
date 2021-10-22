@@ -18,7 +18,7 @@ function menu() {
 
 
 function headerSlider() {
-  var swiper = new Swiper(".header-slider", {
+  var swiper = new Swiper(".header-slider__swiper", {
     loop: true,
     autoplay: {
       delay: 5000,
