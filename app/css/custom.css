@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
   box-sizing: border-box;
 }
 
@@ -17,9 +18,8 @@ body {
 }
 
 /**************************** web menu ************************* */
-.web__menu,
-.web__menu ul,
-.web__menu ul li {
+
+.web__menu, .web__menu ul, .web__menu ul li {
   height: 100%;
 }
 
@@ -75,15 +75,17 @@ body {
   outline: none;
   border: none;
 }
+
 .hamburger:before {
   right: 0px;
 }
+
 .hamburger .bar {
   right: 10px;
   top: 1px;
 }
-.hamburger .bar,
-.hamburger:before {
+
+.hamburger .bar, .hamburger:before {
   content: "";
   display: block;
   width: 30px;
@@ -98,6 +100,7 @@ body {
 .hamburger.is-active:before {
   transform: rotate(45deg) translateX(6px) translateY(7px);
 }
+
 .hamburger.is-active .bar {
   transform: rotate(-45deg) translateX(6px) translateY(7px);
 }
@@ -162,31 +165,30 @@ body {
 
 /******************* HEADER SLIDER (begin) ***********************************/
 
-.header-slider__item {  
-  position: relative;  
-  cursor: pointer;  
+.header-slider__item {
+  position: relative;
+  cursor: pointer;
 }
-.header-slider__img{
+
+.header-slider__img {
   overflow: hidden;
   transition: all 0.3s;
 }
-.header-slider__img:hover,
-.header-slider__item::after {
+
+.header-slider__img:hover, .header-slider__item::after {
   transform: scale(1.01);
 }
+
 .header-slider__item::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0.8) 0,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient( to top, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0) 100%);
   width: 100%;
   height: 30%;
 }
+
 .header-slider__title {
   position: absolute;
   left: 25px;
@@ -199,16 +201,371 @@ body {
   line-height: 43px;
   transition: left 0.5s;
 }
+
 .header-slider__item:hover .header-slider__title {
   left: 40px;
 }
-@media screen and (min-width:1681px){
-  .header-slider__item{
+
+@media screen and (min-width:1681px) {
+  .header-slider__item {
     height: 700px;
   }
 }
-@media screen and (min-width:768px) and (max-width:1024px) {
-  
-}
+
+@media screen and (min-width:768px) and (max-width:1024px) {}
 
 /******************* HEADER SLIDER (end) ***********************************/
+
+/******************* TICKET (begin) ***********************************/
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.ticket {
+  background-image: url(https://pelicula.qodeinteractive.com/wp-content/uploads/2020/03/home-2-img-4.jpg);
+  background-position: top center;
+  background-size: cover;
+  padding: 5% 0%;
+}
+
+.ticket__mini-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #6D6D6D;
+  margin: 0 0 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.ticket__title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #111;
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ticket-left__img {
+  width: 460px;
+  height: 460px;
+  position: relative;
+}
+
+.ticket-left__top-img {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 130px;
+  height: 130px;
+}
+
+.ticket-left__bottom-img {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 130px;
+  height: 130px;
+}
+
+.ticket-right {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  padding: 100px 0;
+  text-align: center;
+}
+
+.ticket-right__title {
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #6D6D6D;
+}
+
+.ticket-right__desc {
+  color: #111;
+  font-size: 41px;
+  line-height: 50px;
+  font-weight: 600;
+  margin: 25px 0;
+}
+
+.ticket-right__btn {
+  text-decoration: none;
+  color: rgb(17, 17, 17);
+  overflow: hidden;
+  font-size: 17px;
+  line-height: 2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 8px 50px;
+  border: 2px solid #111;
+  display: inline-block;
+  position: relative;
+  transition: background .5s;
+}
+
+.ticket-right__btn:hover {
+  color: #fff;
+  z-index: 100;
+}
+
+.ticket-right__btn::before {
+  content: "";
+  background: #111;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 40%;
+  width: 100%;
+  visibility: hidden;
+  transition: height .5s;
+}
+
+.ticket-right__btn:hover::before {
+  height: 100%;
+  visibility: visible;
+}
+
+@media screen and (max-width:767px) {
+  .ticket-left__bottom-img {
+    bottom: 0;
+    right: 0;
+  }
+  .ticket-left__top-img {
+    top: 0;
+    left: 0;
+  }
+  .ticket-left__img {
+    width: auto;
+    height: auto;
+  }
+  .ticket-right {
+    padding: 35px 0;
+    text-align: center;
+  }
+  .ticket-right__desc {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .ticket__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .ticket-left__img {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+  .ticket-left__bottom-img {
+    right: 0;
+  }
+  .ticket-left__top-img {
+    left: 0;
+  }
+}
+
+@media screen and (min-width:1024px) and (max-width:1199px) {
+  .ticket-left__img {
+    width: auto;
+    height: auto;
+  }
+}
+
+/******************* TICKET (end) ***********************************/
+
+/******************* BLOG (start) ***********************************/
+.blog-card {
+  padding: 50px 0;
+}
+.blog-card__media {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.blog-card__media::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, .8) 0, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  height: 45%;
+}
+
+.blog-card__media img {
+  transition: all .5s;
+}
+
+.blog-card__item:hover img {
+  transform: scale(1.02);
+}
+
+.blog-card__title {
+  position: relative;
+  top: -40px;
+  left: 25px;
+  transition: left .5s;
+}
+
+.blog-card__item:hover .blog-card__title {
+  left: 30px;
+}
+.blog-card__body{
+  margin-top: -20px;
+  padding:0 25px;
+}
+.blog-card__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 29px;
+  line-height: 35px;
+  color: var(--black);
+  font-weight: 600;
+}
+
+.blog-card__link:hover{
+  color: var(--black);
+}
+
+.blog-card__info{
+  margin:0;
+  padding:0;
+  display: flex;
+}
+.blog-card__info-item{
+  padding-right: 7px;
+  color: #a6a6a6;
+  font-size: 14px;
+  line-height: 22px;
+  cursor: pointer;
+  transition: color .5s;
+}
+.blog-card__info-item::after{
+  content: "/";
+  display: inline-block;
+  margin-left: 7px;
+}
+.blog-card__info-item:last-child::after{
+  content: "";
+}
+.blog-card__info-item:hover{
+  color: var(--black);
+}
+
+.bloc-card__btns{
+  padding: 0;
+  margin:15px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blog-card__btns-item:first-child .blog-card__btns-link{
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--black);
+  font-size: 16px;
+}
+.blog-card__btns-item:first-child .blog-card__btns-link::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 1px;
+  width: 15px;
+  margin-right: 7px;
+  background-color: var(--black);
+  transition: width .5s;
+}
+.blog-card__btns-item:first-child .blog-card__btns-link:hover::before{
+  width: 100%;
+}
+.blog-card__btns-link{
+  position: relative;
+  text-decoration: none;
+  color: #6D6D6D;
+  font-size: 14px;
+}
+
+.blog-card__btns-link:hover{
+  color: var(--black);
+}
+.blog-card__btns-item.share{
+  position: relative; 
+}
+.blog-card__btns-item.share .blog-card__share-list{  
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 50;
+  left: 0;
+  top: 25px;
+  width: 40px;
+  height: 10%;
+  visibility: hidden;
+  transition: all 1s;
+}
+.blog-card__btns-item.share li{
+  border-left: 1px solid #989898;
+  padding-left: 7px;
+}
+.blog-card__btns-item.share:hover .blog-card__share-list{
+  visibility: visible;
+  height: 100%;
+  
+}
+.blog-card__share-list a{
+  color: var(--black);
+  font-size: 16px;
+}
+@media screen and (max-width:320px) {
+  .blog-card__body{
+    padding:0;
+  }
+}
+@media screen and (max-width:767px) {
+  .blog-card__item{
+    margin-bottom: 30px;
+  }
+  .blog-card{
+    padding-top: 0;
+  }
+  .blog-card__title{
+    left: 0 !important;
+  }
+  .blog-card__link{
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+  .blog-card__item{
+    margin-bottom: 30px;
+  }
+  
+  .blog-card{
+    padding-top: 0;
+  }
+}
+@media screen and (min-width:1024px) and (max-width:1199px) {
+  .blog-card__link{
+    font-size: 23px;
+    line-height: 30px;
+  }
+  .blog-card__body{
+    padding: 0;
+  }
+}
+/******************* BLOG (end) ***********************************/
